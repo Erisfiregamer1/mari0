@@ -1,4 +1,4 @@
-=
+
 name: IDoNotFeelLikeBuildingThisManually
 on:
   push:
