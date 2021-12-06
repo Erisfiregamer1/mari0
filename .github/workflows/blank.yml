@@ -1,4 +1,3 @@
-
 name: IDoNotFeelLikeBuildingThisManually
 on:
   push:
@@ -18,14 +17,14 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-- uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 # Build the applications
-- uses: nhartland/love-build@v1-beta2
-  with:
-   app_name: 'hello_world'
-   love_version: '11.2'
+    - uses: nhartland/love-build@v1-beta2
+      with:
+       app_name: 'hello_world'
+       love_version: '11.2'
 # Upload the built applications
-- uses: actions/upload-artifact@v1
-  with:
-    name: built-applications
-    path: 'release'
+    - uses: actions/upload-artifact@v1
+      with:
+       name: built-applications
+       path: 'release'
